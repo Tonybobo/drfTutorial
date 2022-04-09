@@ -23,7 +23,6 @@ from users import views
 # router.register(r'users/<int:pk>/', views.UserDetail , basename='userDetail')
 
 urlpatterns = [
-    path('users', views.UserList.as_view()),
-    path('users/<int:pk>/', views.UserDetail.as_view()),
+   path('api/user/' , include('users.urls')),
     path('admin/', admin.site.urls),
 ]
